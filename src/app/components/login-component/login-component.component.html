@@ -1,0 +1,17 @@
+<div fxLayout="column" fxLayoutAlign="space-around center"> 
+<mat-form-field class="example-form-field">
+    <mat-label>User Name</mat-label>
+    <input matInput type="text" [(ngModel)]="userName">
+    <button mat-button *ngIf="userName" matSuffix mat-icon-button aria-label="Clear" (click)="userName=''">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+  <mat-form-field class="example-form-field">
+    <mat-label>Password</mat-label>
+    <input matInput type="password" [(ngModel)]="password">
+    <button mat-button *ngIf="password" matSuffix mat-icon-button aria-label="Clear" (click)="password=''">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+  <button type='button' (click)='loginClick(userName,password)' mat-button color="primary">Log in</button>
+</div>
